@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="shell-type" content="mobile_tab">
+  <title>PariPasso - Voci della comunità</title>
+
+  <!-- CSS Globale Condiviso -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Tailwind Engine e Configurazione Esterna -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <!-- Script Globale (Gestione Routing ed Emergenza) -->
+  <script src="js/global.js" defer></script>
+</head>
+<body class="bg-surface font-body-default text-body-default text-text-body flex flex-col min-h-screen">
+
+  <!-- Bottone Rapido Emergenza Superiore (Coerente su tutte le pagine) -->
+  <div class="fixed top-2.5 right-3 z-50 pt-safe">
+      <a href="chiedere-aiuto.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-error text-on-error font-button-label text-[13px] font-bold shadow-[0_4px_14px_rgba(186,26,26,0.35)] active:scale-95 transition-transform hover:opacity-95">
+        <span class="material-symbols-outlined text-[17px]">emergency</span>
+        <span class="tracking-wide">Ho bisogno di aiuto!</span>
+      </a>
+  </div>
+
+  <main class="flex-1 flex flex-col relative w-full pb-28 px-gutter bg-surface pt-safe">
+    <div class="flex flex-col w-full space-y-5">
+      
+      <!-- Header Branding Bar -->
+      <header class="flex items-center justify-between pt-1">
+        <div class="flex items-center gap-2">
+          <a href="index.html">
+            <img alt="PariPasso Logo" class="h-8 object-contain w-auto max-w-[140px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_tIPSC9DKRmGHQytW_HAET8W16o-txGu5per1l7t4bi13ZNUWzKRepAPye823QgGO2B1m4GBNvb1L_TiDWtDhp5NTfOwTZmqN1KDPoIbo9DJyWYNxtpEVJJga7wCl-lRscrZAtRwpGpIf3assgJ0tLtGUBVlYoh8iFgEfR_o68oFiCRgIBJMeOe2JS2MimR8hkYz4-MuXGSJuqEEY_WEDSsLUB4mEotS528a4pRd--6zHfUY9dY-3dbhD_93t4QDUP80">
+          </a>
+        </div>
+      </header>
+
+      <!-- Titolo & Introduzione Schermata -->
+      <section class="space-y-2">
+  
+      <h1 class="text-[26px] font-extrabold text-primary leading-tight tracking-tight">
+          Una comunità che si attiva
+        </h1>
+        <div class="space-y-2 text-text-body font-body-default text-body-default">
+          <p class="leading-relaxed">
+            Il rispetto cresce dove le persone si incontrano, si ascoltano e fanno qualcosa insieme.
+          </p>
+          <p class="text-text-muted leading-relaxed">
+            Un bisogno può emergere in famiglia, a scuola, sul lavoro o tra amici. Nel territorio possiamo trovare persone con cui comprenderlo e competenze per affrontarlo. Qui puoi scoprire la rete della comunità, trovare occasioni di incontro e scegliere come partecipare.
+          </p>
+        </div>
+      </section>
+
+      <!-- Immagine Rassicurante d'Apertura -->
+      <section class="relative rounded-2xl overflow-hidden shadow-sm bg-surface-container-high">
+        <div class="relative w-full h-52 overflow-hidden">
+          <div class="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Gruppo di persone in un cerchio accogliente che dialogano con serenità" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-1DmXBT_sY8xs_n1wbfbGvvM18jt_UhTNvzWtTWzCBR2XHgFUiNUZhniZzHQ88rU_mVLn-jSwsF_fmML5XdOCdsWFDG9Cgxv9wl4MggI-SHo9ZJMj6W7rf44jjyKwW8cHp_ABhqPU8uuU093IoBO37GIOBM0XqZuCbSKx6d-X1Vxm21jEfpQLL7FoYjr1nw5FnofoiHiEfQuG5BPysGRAveYUTjzA_TmeiTOBYVuIu0te1MV791mGuA')"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+          
+          <!-- Overlay Badge -->
+          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md text-text-primary shadow-sm">
+              <span class="material-symbols-outlined text-[16px] text-secondary">diversity_3</span>
+              <span class="font-button-label text-caption-meta font-semibold">Incontrarsi, condividere, costruire rispetto</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner / Avviso di Sicurezza e Supporto -->
+      <section class="bg-emergency-exit-bg rounded-2xl p-4 shadow-sm flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-emergency-exit text-on-error flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+          <span class="material-symbols-outlined text-[18px]">support_agent</span>
+        </div>
+        <div class="space-y-1.5 min-w-0 flex-1">
+          <p class="font-subheading text-body-small text-text-body font-semibold">
+            Hai bisogno di un supporto immediato o personale?
+          </p>
+          <p class="font-body-small text-body-small text-text-muted leading-relaxed">
+            Se stai vivendo una situazione di violenza o cerchi sostegno per qualcuno, accedi alla sezione dedicata ai contatti con operatori specializzati.
+          </p>
+          <a class="inline-flex items-center gap-1 font-button-label text-body-small text-emergency-exit hover:underline pt-1" href="chiedere-aiuto.html">
+            <span>Chiedi aiuto</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SEZIONE FORUM DI DIALOGO & RACCONTO ESPERIENZE -->
+      <section class="space-y-3.5 pt-2">
+        <div class="space-y-1">
+          <div class="flex items-center justify-between">
+            <h2 class="font-screen-title text-card-title text-text-primary flex items-center gap-2 font-bold">
+              <span>Spazio di confronto &amp; Racconti</span>
+            </h2>
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-caption-meta font-caption-meta text-text-muted">
+              <span class="material-symbols-outlined text-[13px] text-tertiary-fixed-dim">verified_user</span> Protetto
+            </span>
+          </div>
+          <p class="font-body-small text-body-small text-text-muted">
+            Fai una domanda, racconta la tua esperienza o lascia un chiarimento in forma sicura e protetta.
+          </p>
+        </div>
+
+        <!-- Category Filter Pills (Horizontal Scroll) -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-gutter px-gutter" id="forum-filter-bar">
+          <button class="shrink-0 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-button-label text-caption-meta shadow-sm transition-all active:scale-95" data-category="all">
+            Tutte le storie
+          </button>
+          <button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-text-body font-button-label text-caption-meta hover:bg-surface-variant transition-all active:scale-95" data-category="domande">
+            Domande &amp; Risposte
+          </button>
+          <button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-text-body font-button-label text-caption-meta hover:bg-surface-variant transition-all active:scale-95" data-category="scuola">
+            Scuola &amp; Giovani
+          </button>
+          <button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-text-body font-button-label text-caption-meta hover:bg-surface-variant transition-all active:scale-95" data-category="famiglia">
+            Famiglia &amp; Relazioni
+          </button>
+          <button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-text-body font-button-label text-caption-meta hover:bg-surface-variant transition-all active:scale-95" data-category="lavoro">
+            Sul lavoro
+          </button>
+        </div>
+
+        <!-- CTA Condivisione Anonima -->
+        <button class="w-full h-12 rounded-xl bg-surface-container-lowest text-text-primary shadow-sm hover:shadow-md transition-all flex items-center justify-between px-4 group active:scale-[0.99]">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+              <span class="material-symbols-outlined text-[18px]">add</span>
+            </div>
+            <span class="font-button-label text-button-label text-left text-text-primary">
+              Condividi un'esperienza o fai una domanda
+            </span>
+          </div>
+          <span class="material-symbols-outlined text-[18px] text-text-muted group-hover:translate-x-0.5 transition-transform">edit_note</span>
+        </button>
+
+        <div class="flex items-center justify-center gap-1.5 text-caption-meta font-caption-meta text-text-muted">
+          <span class="material-symbols-outlined text-[13px] text-secondary">lock</span>
+          <span>Spazio moderato, tutela totale dell'anonimato</span>
+        </div>
+
+        <!-- Forum Cards List -->
+        <div class="space-y-3 pt-1">
+          
+          <!-- Card 1 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-text-muted">
+                  <span class="material-symbols-outlined text-[18px]">person</span>
+                </div>
+                <div>
+                  <p class="font-subheading text-caption-meta font-semibold text-text-body">Studente anonimo, 17 anni</p>
+                  <p class="font-caption-meta text-caption-meta text-text-muted">Scuola &amp; Giovani • 2 ore fa</p>
+                </div>
+              </div>
+              <span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-caption-meta font-caption-meta font-semibold">
+                Domanda aperta
+              </span>
+            </div>
+            <p class="font-card-title text-card-title text-text-body font-medium leading-snug">
+              «A scuola fatichiamo a parlare di consenso senza imbarazzo: come proporre un confronto costruttivo?»
+            </p>
+            
+            <!-- Risposta in evidenza da associazione -->
+            <div class="bg-surface-container-low rounded-xl p-3 space-y-1.5">
+              <div class="flex items-center gap-1.5 text-text-primary font-caption-meta text-caption-meta font-semibold">
+                <span class="material-symbols-outlined text-[15px] text-primary-container">shield_with_heart</span>
+                <span>Risposta in evidenza: Associazione Educatori Territoriali</span>
+              </div>
+              <p class="font-body-small text-body-small text-text-body leading-relaxed">
+                «Consigliamo di partire da situazioni ipotetiche e non personali, usando spezzoni di serie TV o podcast per facilitare il dialogo senza esporre i singoli studenti...»
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-1 text-text-muted font-caption-meta text-caption-meta">
+              <div class="flex items-center gap-3">
+                <span class="flex items-center gap-1 text-text-primary font-semibold">
+                  <span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+                  8 chiarimenti della comunità
+                </span>
+              </div>
+              <button class="flex items-center gap-0.5 text-secondary font-semibold hover:underline">
+                <span>Leggi discussione</span>
+                <span class="material-symbols-outlined text-[15px]">chevron_right</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-caption-meta">
+                  A
+                </div>
+                <div>
+                  <p class="font-subheading text-caption-meta font-semibold text-text-body">Anonimo</p>
+                  <p class="font-caption-meta text-caption-meta text-text-muted">Sul lavoro • Ieri</p>
+                </div>
+              </div>
+              <span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-caption-meta font-caption-meta font-semibold">
+                Testimonianza
+              </span>
+            </div>
+            <p class="font-card-title text-card-title text-text-body font-medium leading-snug">
+              «Riconoscere i primi segnali sul lavoro: la mia esperienza nel pretendere rispetto dei confini professionali»
+            </p>
+            <p class="font-body-default text-body-default text-text-muted line-clamp-2">
+              All’inizio erano battute camuffate da cameratismo durante le pause caffè. Condivido il modo in cui con due colleghi abbiamo posto un limite chiaro e coinvolto le risorse umane.
+            </p>
+            <div class="flex items-center justify-between pt-1 text-text-muted font-caption-meta text-caption-meta">
+              <span class="flex items-center gap-1 text-text-primary font-semibold">
+                <span class="material-symbols-outlined text-[16px]">favorite_border</span>
+                14 riflessioni della comunità
+              </span>
+              <button class="flex items-center gap-0.5 text-secondary font-semibold hover:underline">
+                <span>Leggi racconto</span>
+                <span class="material-symbols-outlined text-[15px]">chevron_right</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-text-muted">
+                  <span class="material-symbols-outlined text-[18px]">group</span>
+                </div>
+                <div>
+                  <p class="font-subheading text-caption-meta font-semibold text-text-body">Anonimo</p>
+                  <p class="font-caption-meta text-caption-meta text-text-muted">Famiglia &amp; Relazioni • 3 giorni fa</p>
+                </div>
+              </div>
+              <span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-caption-meta font-caption-meta font-semibold">
+                Confronto attivo
+              </span>
+            </div>
+            <p class="font-card-title text-card-title text-text-body font-medium leading-snug">
+              «Come gestire i commenti sessisti nel gruppo di amici senza passare per 'quello pesante'?»
+            </p>
+            <div class="flex items-center justify-between pt-1 text-text-muted font-caption-meta text-caption-meta">
+              <span class="flex items-center gap-1 text-text-primary font-semibold">
+                <span class="material-symbols-outlined text-[16px]">forum</span>
+                12 chiarimenti disponibili
+              </span>
+              <button class="flex items-center gap-0.5 text-secondary font-semibold hover:underline">
+                <span>Partecipa</span>
+                <span class="material-symbols-outlined text-[15px]">chevron_right</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- SEZIONE GUIDA AZIONI: "PARTI DA CIÒ CHE TI SERVE" -->
+      <section class="space-y-4 pt-3">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-1.5 text-secondary font-caption-meta text-caption-meta uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[15px]">explore</span>
+            <span>Rete &amp; Iniziative</span>
+          </div>
+          <h2 class="font-screen-title text-screen-title text-text-primary font-bold">
+            Opportunità nella comunità
+          </h2>
+          <p class="font-body-small text-body-small text-text-muted">
+            Percorsi, risorse ed esperti per passare dall'ascolto all'azione condivisa.
+          </p>
+        </div>
+
+        <!-- 7 Moduli Interattivi Richiesti -->
+        <div class="space-y-3.5">
+          
+          <!-- Item 1 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3 transition-transform hover:-translate-y-0.5">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">handshake</span>
+              </div>
+              <h3 class="font-card-title text-card-title text-text-primary font-bold">
+                Parti da ciò che ti serve
+              </h3>
+            </div>
+            <p class="font-body-default text-body-default text-text-body leading-relaxed">
+              Cerchi qualcuno con cui parlare? Un’attività per la tua classe? Un confronto per genitori? Vuoi affrontare una situazione emersa nella tua associazione o nel tuo luogo di lavoro? Ogni esigenza merita un interlocutore adatto. Conoscere chi opera vicino a te è il primo passo per trovare una risposta.
+            </p>
+            <button class="w-full py-2.5 px-4 rounded-xl bg-surface-container text-text-primary font-button-label text-button-label flex items-center justify-between hover:bg-primary-fixed/50 transition-colors">
+              <span>Trova persone e realtà del territorio</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3 transition-transform hover:-translate-y-0.5">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">hub</span>
+              </div>
+              <h3 class="font-card-title text-card-title text-text-primary font-bold">
+                Conosci chi può fare la differenza
+              </h3>
+            </div>
+            <p class="font-body-default text-body-default text-text-body leading-relaxed">
+              Centri antiviolenza, istituzioni, servizi, scuole, associazioni, gruppi e professionisti contribuiscono con ruoli e competenze diverse. Scopri di che cosa si occupano, a chi si rivolgono e come contattarli. Per ogni realtà, informazioni chiare ti aiutano a capire quale sostegno offre e quali opportunità di collaborazione propone.
+            </p>
+            <button class="w-full py-2.5 px-4 rounded-xl bg-surface-container text-text-primary font-button-label text-button-label flex items-center justify-between hover:bg-secondary-fixed/50 transition-colors">
+              <span>Esplora la rete</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3 transition-transform hover:-translate-y-0.5">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+              </div>
+              <h3 class="font-card-title text-card-title text-text-primary font-bold">
+                Incontriamoci, anche fuori dallo schermo
+              </h3>
+            </div>
+            <p class="font-body-default text-body-default text-text-body leading-relaxed">
+              Un laboratorio, una lettura condivisa, un incontro a scuola o un confronto tra generazioni: le occasioni per costruire rispetto possono nascere nei luoghi che frequentiamo ogni giorno. Partecipare significa conoscere altre esperienze, fare domande e costruire legami che continuano nel tempo.
+            </p>
+            <button class="w-full py-2.5 px-4 rounded-xl bg-surface-container text-text-primary font-button-label text-button-label flex items-center justify-between hover:bg-tertiary-fixed/50 transition-colors">
+              <span>Scopri incontri e iniziative</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3 transition-transform hover:-translate-y-0.5">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-surface-container-high text-text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+              </div>
+              <h3 class="font-card-title text-card-title text-text-primary font-bold">
+                Metti in circolo ciò che puoi offrire
+              </h3>
+            </div>
+            <p class="font-body-default text-body-default text-text-body leading-relaxed">
+              Hai una competenza, un po’ di tempo, uno spazio disponibile o un’idea? Puoi contribuire a un’attività, ospitare un incontro o collaborare a un progetto. Non occorre avere tutte le risposte. Conta riconoscere ciò che puoi mettere a disposizione e trovare le persone con cui farlo.
+            </p>
+            <button class="w-full py-2.5 px-4 rounded-xl bg-surface-container text-text-primary font-button-label text-button-label flex items-center justify-between hover:bg-surface-container-high transition-colors">
+              <span>Scopri come contribuire</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3 transition-transform hover:-translate-y-0.5">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">campaign</span>
+              </div>
+              <h3 class="font-card-title text-card-title text-text-primary font-bold">
+                Da un’esigenza condivisa a un’azione concreta
+              </h3>
+            </div>
+            <p class="font-body-default text-body-default text-text-body leading-relaxed">
+              A scuola emergono episodi di linguaggio sessista? In un gruppo si fatica a parlare di consenso? Alcune famiglie chiedono strumenti per affrontare questi temi con i figli? Dare ascolto a un problema permette di coinvolgere le competenze adatte e costruire una proposta: un percorso educativo, un momento di confronto o una collaborazione tra realtà del territorio. Racconta un bisogno o proponi un’attività, senza condividere nomi o dettagli personali di altre persone.
+            </p>
+            <button class="w-full py-2.5 px-4 rounded-xl bg-primary-container text-on-primary font-button-label text-button-label flex items-center justify-between hover:opacity-95 transition-opacity">
+              <span>Proponi un’iniziativa</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm space-y-3 transition-transform hover:-translate-y-0.5">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-secondary text-on-secondary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">apartment</span>
+              </div>
+              <h3 class="font-card-title text-card-title text-text-primary font-bold">
+                Fai parte di un’organizzazione?
+              </h3>
+            </div>
+            <p class="font-body-default text-body-default text-text-body leading-relaxed">
+              Se rappresenti un ente, una scuola, un’associazione, un gruppo o uno studio professionale, puoi contribuire a rendere la rete più vicina alle persone. Presenta le tue attività, indica quali competenze puoi offrire e scopri con chi collaborare. Connessioni chiare aiutano la comunità a trasformare le intenzioni in impegni concreti.
+            </p>
+            <button class="w-full py-2.5 px-4 rounded-xl bg-surface-container text-secondary font-button-label text-button-label flex items-center justify-between hover:bg-secondary-fixed/40 transition-colors">
+              <span>Proponi la tua realtà alla rete</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </article>
+
+          <!-- Item 7 -->
+          <article class="bg-gradient-to-br from-primary-container to-primary text-on-primary rounded-2xl p-4 shadow-md space-y-3">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-on-primary/15 text-on-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span>
+              </div>
+              <h3 class="font-card-title text-card-title text-on-primary font-bold">
+                Il prossimo incontro può cominciare da te
+              </h3>
+            </div>
+            <p class="font-body-default text-body-default text-on-primary/90 leading-relaxed">
+              Puoi cercare un contatto, partecipare a un evento o mettere a disposizione una risorsa. Anche un piccolo impegno può aprire nuove possibilità per chi ti vive accanto.
+            </p>
+            <button class="w-full py-3 px-4 rounded-xl bg-surface-container-lowest text-text-primary font-button-label text-button-label flex items-center justify-center gap-2 shadow-sm hover:bg-surface-container transition-colors active:scale-95">
+              <span>Entra in connessione</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Box Garanzia Anonimato e Riservatezza -->
+      <footer class="bg-surface-container-low rounded-2xl p-4 space-y-2 mb-2">
+        <div class="flex items-center gap-2 text-text-primary font-subheading text-body-small font-semibold">
+          <span class="material-symbols-outlined text-[18px] text-primary-container">enhanced_encryption</span>
+          <span>PariPasso: Spazio Protetto e Moderato</span>
+        </div>
+        <p class="font-body-small text-body-small text-text-muted leading-relaxed">
+          Tutti i contributi pubblicati nel forum vengono esaminati da un team di moderatrici e moderatori qualificati prima della visualizzazione. Nessun dato identificativo o indirizzo IP viene condiviso pubblicamente.
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Pulsante Flottante Emergenza "Esci subito" -->
+  <div class="fixed bottom-20 right-4 z-50">
+    <a class="min-h-[44px] h-11 px-4 rounded-full bg-emergency-exit text-on-error font-button-label text-button-label flex items-center gap-1.5 shadow-[0_6px_20px_0_rgba(217,83,79,0.35)] active:scale-95 transition-transform hover:opacity-95" href="https://www.google.com" rel="nofollow noreferrer">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+      <span>Esci subito</span>
+    </a>
+  </div>
+
+<!-- Bottom Navigation Bar (Allineamento orizzontale perfetto su 1 riga) -->
+<nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(32,52,136,0.06)]">
+  <div class="flex justify-between items-center h-16 px-1">
+    
+    <!-- 1. Conoscere -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="conoscere" href="conoscere.html">
+      <span class="material-symbols-outlined text-[22px]">menu_book</span>
+      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Conoscere</span>
+    </a>
+
+    <!-- 2. Riconoscersi -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="riconoscersi" href="riconoscersi.html">
+      <span class="material-symbols-outlined text-[22px]">psychology</span>
+      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Riconoscersi</span>
+    </a>
+
+    <!-- 3. Voci -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="voci" href="voci.html">
+      <span class="material-symbols-outlined text-[22px]">forum</span>
+      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Voci</span>
+    </a>
+
+    <!-- 4. Chiedi aiuto (Evidenziato in rosso, dicitura compatta su 1 riga) -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 transition-colors min-h-[44px] text-emergency-exit" data-path="chiedere-aiuto" href="chiedere-aiuto.html">
+      <span class="material-symbols-outlined text-[22px]">shield</span>
+      <span class="text-[11px] leading-tight mt-1 font-bold whitespace-nowrap">Chiedi aiuto</span>
+    </a>
+
+  </div>
+</nav>
+
+  <!-- Script Funzionale Esterno -->
+  <script src="js/voci.js"></script>
+</body>
+</html>

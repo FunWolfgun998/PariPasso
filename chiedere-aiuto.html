@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="shell-type" content="mobile_tab">
+  <title>PariPasso - Trova ascolto e aiuto</title>
+
+  <!-- CSS Globale Condiviso -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Tailwind Engine e Configurazione Esterna -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <!-- Script Globale (Gestione Routing ed Emergenza) -->
+  <script src="js/global.js" defer></script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+
+<!-- Rimosso pt-28: ora usa pt-safe e il logo è allineato al pulsante -->
+<main class="flex-1 flex flex-col relative w-full pt-safe pb-28 px-gutter bg-surface">
+  <div class="flex flex-col w-full px-margin pb-space-2xl gap-space-lg">
+
+    <!-- Header Comune: Logo a sinistra, Pulsante rosso a destra sullo stesso livello -->
+    <header class="w-full flex items-center justify-between pt-3 pb-1 mb-1">
+      <a href="index.html" class="inline-flex items-center active:opacity-80 transition-opacity">
+        <img alt="PariPasso" class="h-9 w-auto object-contain max-w-[150px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsCx-cf6jm3NFr5CmhjViNct7pTViHewo5bfRZCjzlsLIdG4dgL87BRVST3KLCyhW21QmoSGWuKgo6WdQwML7cjesth0G1YOqJoDeAJv2rML6XT6JChNG5GF_0ZgS-DAtL5wTtcz-VjcpeMS2CMtW_iGuw7D5S8_eQZxsgtZdAgjA84e0KsmIidDnuGnYDww_waJhMjdwbZgRt0vlx23MtX8gx7p3x4IwHnGga5KZxUtoNABLjfpEWIBVPZ7hJuliFhb4">
+      </a>
+      <a href="chiedere-aiuto.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-error text-on-error font-button-label text-[13px] font-bold shadow-[0_4px_14px_rgba(186,26,26,0.35)] active:scale-95 transition-transform hover:opacity-95">
+        <span class="material-symbols-outlined text-[17px]">emergency</span>
+        <span class="tracking-wide">Ho bisogno di aiuto!</span>
+      </a>
+    </header>
+
+    <!-- Titolo Diretto e Spaziature Uniformi -->
+    <section class="flex flex-col gap-1 pt-1">
+      <h1 class="text-[26px] font-extrabold text-primary leading-tight tracking-tight">
+        Trova ascolto e aiuto
+      </h1>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Il rispetto nasce dalle relazioni. Il cambiamento nasce da noi.<br>
+        Quello che vivi merita ascolto, anche quando è difficile trovare le parole. Puoi cominciare da ciò che senti, anche senza avere tutte le risposte.
+      </p>
+    </section>
+
+      <!-- 2. BOX DI PERICOLO IMMEDIATO ED EMERGENZA -->
+      <section class="flex flex-col w-full bg-error-container text-on-error-container rounded-xl p-space-md shadow-md gap-space-sm relative overflow-hidden">
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-error text-2xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+          <h2 class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-error-container">Sei in pericolo immediato?</h2>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-error-container/90">
+          Se tu o qualcuno vicino a te si trova in una situazione critica, non esitare. Le chiamate a questi numeri sono gratuite, protette e non compaiono sui tabulati telefonici standard.
+        </p>
+
+        <!-- Pulsanti Emergenza Diretti -->
+        <div class="flex flex-col gap-space-xs mt-space-xs">
+          <a href="tel:1522" class="flex items-center justify-between w-full bg-error text-on-error px-space-md py-3 rounded-full shadow-sm hover:opacity-95 transition-all">
+            <div class="flex items-center gap-space-xs min-w-0">
+              <span class="material-symbols-outlined text-2xl shrink-0" style="font-variation-settings: 'FILL' 1;">call</span>
+              <div class="flex flex-col min-w-0 leading-tight text-left">
+                <span class="font-label-lg text-label-lg font-bold truncate">Chiama il 1522</span>
+                <span class="font-label-sm text-label-sm opacity-90 truncate">Antiviolenza &amp; Stalking • h24 Gratuito</span>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-lg shrink-0">arrow_forward</span>
+          </a>
+
+          <a href="tel:112" class="flex items-center justify-between w-full bg-surface-container-lowest text-error border border-error/20 px-space-md py-3 rounded-full shadow-sm hover:bg-surface-container transition-all">
+            <div class="flex items-center gap-space-xs min-w-0">
+              <span class="material-symbols-outlined text-2xl shrink-0" style="font-variation-settings: 'FILL' 1;">emergency</span>
+              <div class="flex flex-col min-w-0 leading-tight text-left">
+                <span class="font-label-lg text-label-lg font-bold">112 Numero Unico Europeo</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant truncate">Soccorso urgente forze dell'ordine</span>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-lg shrink-0">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Guida a scomparsa: cancellare tracce e chat -->
+        <div class="mt-space-xs bg-surface-container-lowest/80 backdrop-blur-sm rounded-lg p-space-sm flex flex-col gap-space-xs border border-error/10">
+          <button id="toggle-safety-guide" class="flex items-center justify-between w-full text-left font-label-md text-label-md font-semibold text-on-error-container focus:outline-none">
+            <span class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-base">history_toggle_off</span>
+              Come cancellare subito le tracce di navigazione e le chat
+            </span>
+            <span id="guide-arrow" class="material-symbols-outlined text-base transition-transform duration-200">expand_more</span>
+          </button>
+          <div id="safety-guide-content" class="hidden flex-col gap-2 pt-1 text-on-surface-variant font-body-sm text-body-sm">
+            <div class="flex items-start gap-2">
+              <span class="font-bold text-error">•</span>
+              <span><strong>Cronologia del browser:</strong> su Chrome e Safari apri Menu → Cronologia → 'Cancella dati di navigazione' (seleziona 'Ultima ora' o 'Tutto').</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="font-bold text-error">•</span>
+              <span><strong>Chat e messaggi:</strong> per WhatsApp e Telegram, elimina la singola conversazione o attiva i messaggi effimeri; svuota la cartella dei download recenti se hai salvato file.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="font-bold text-error">•</span>
+              <span><strong>Navigazione anonima:</strong> usa sempre una scheda privata / incognito quando cerchi informazioni sensibili.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FILTRI TEMATICI A PILLOLE ORIZZONTALI -->
+      <section class="flex flex-col gap-space-xs">
+        <div class="flex items-center justify-between">
+          <span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Ambiti di Supporto</span>
+          <span class="font-label-sm text-label-sm text-outline">Scorri orizzontalmente →</span>
+        </div>
+        <div class="flex gap-2 overflow-x-auto pb-1 -mx-margin px-margin" id="support-filters">
+          <button class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold whitespace-nowrap shadow-sm shrink-0">Tutti i Servizi</button>
+          <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium whitespace-nowrap shrink-0 transition-colors">Violenza Fisica &amp; Psicologica</button>
+          <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium whitespace-nowrap shrink-0 transition-colors">Abuso Finanziario ed Economico</button>
+          <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium whitespace-nowrap shrink-0 transition-colors">Relazione di Coppia &amp; Famiglia</button>
+          <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium whitespace-nowrap shrink-0 transition-colors">Stalking &amp; Controllo Digitale</button>
+          <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium whitespace-nowrap shrink-0 transition-colors">Accoglienza d'Emergenza</button>
+          <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium whitespace-nowrap shrink-0 transition-colors">Supporto Legale Gratuito</button>
+          <button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container font-label-sm text-label-sm font-medium whitespace-nowrap shrink-0 transition-colors">Percorsi per Autori di Violenza</button>
+        </div>
+      </section>
+
+      <!-- 4. SELEZIONE TERRITORIALE DELLA POSIZIONE ED ENTI -->
+      <section class="flex flex-col w-full gap-space-md">
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-2xl">pin_drop</span>
+            <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Mappatura e Rete Territoriale</h3>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Punti di riferimento certificati sul territorio: Centri Antiviolenza autorizzati (Rete Nazionale CAV), Consultori Pubblici e Sportelli Specialistici.
+          </p>
+        </div>
+
+        <!-- Box Geolocalizzazione Protetta -->
+        <div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs">
+          <div class="flex items-center justify-between gap-space-xs">
+            <button id="btn-use-location" class="flex-1 bg-surface-container-lowest text-primary px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98]">
+              <span class="material-symbols-outlined text-base">my_location</span>
+              <span>Posizione approssimata: Milano e provincia</span>
+            </button>
+            <button id="btn-open-region-select" class="bg-surface-container-lowest text-on-surface px-space-sm py-2 rounded-full font-label-md text-label-md font-medium flex items-center justify-center gap-1 shadow-sm">
+              <span class="truncate">Cambia città</span>
+              <span class="material-symbols-outlined text-base shrink-0">arrow_drop_down</span>
+            </button>
+          </div>
+          <div class="flex items-center justify-center gap-2 pt-0.5">
+            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+              <span class="material-symbols-outlined text-sm">security</span>
+              GPS Non Salvato • Raggio 5 km
+            </span>
+          </div>
+        </div>
+
+        <!-- Mappa Stilizzata Discreta -->
+        <div class="relative w-full h-44 rounded-xl overflow-hidden shadow-sm" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlsd3ch2uXfCPCkFhZPZ6FTZ7iKW9JiuHBsxhDt1ivam3jBrAm7TrwXCBRxdv4EGGRgkqE8GCXrpOA8KQcTdPTdPPi5yrbGZ58RP24A3SWuOo7bhOLUVZtdB-i4MSXGE5aaXc4hAp4YxM0jmzE6jpn2T88bMODtaj_YeZsuChDGhvq5DGjWLdhPeRyLdXm9SoR9NFzRjJrMVr9h1lytZlv07s1sgk9eFs5AZ0eFwVC'); background-size: cover; background-position: center;">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex items-end p-space-md">
+            <div class="flex items-center justify-between w-full text-on-primary">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-tertiary-fixed-dim">location_on</span>
+                <span class="font-label-md text-label-md font-semibold">4 presidi territoriali verificati</span>
+              </div>
+              <span class="font-label-sm text-label-sm bg-surface-container-lowest/20 backdrop-blur-md px-2 py-0.5 rounded-full">Aggiornato h24</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Schede Dettagliate degli Enti -->
+        <div class="flex flex-col gap-space-sm">
+          
+          <!-- Ente 1: Spazio Rosa CAV -->
+          <article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm border border-outline-variant/30">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Accreditato Rete 1522</span>
+                  <span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Presidio H24</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">• 1.2 km</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Centro Antiviolenza "Spazio Rosa"</h4>
+                <p class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">place</span> Via delle Camelie 14, Milano
+                </p>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 text-secondary">
+                <span class="material-symbols-outlined text-xl">cottage</span>
+              </div>
+            </div>
+            <div class="flex gap-1.5 flex-wrap my-0.5">
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Violenza Fisica &amp; Psicologica</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Supporto Legale Gratuito</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Accoglienza d'emergenza, supporto psicologico gratuito, casa rifugio protetta ad indirizzo segreto e orientamento per l'uscita dalla violenza in totale anonimato.
+            </p>
+            <div class="flex items-center gap-space-xs pt-1">
+              <a href="tel:1522" class="flex-1 bg-primary text-on-primary px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98]">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span>Chiama in anonimo</span>
+              </a>
+              <button onclick="alert('Accesso Sicuro Spazio Rosa:\n- Presidio h24 sempre attivo\n- Colloquio con psicologhe e avvocate specializzate gratuito\n- Adempimento rigoroso del segreto professionale.')" class="flex-1 bg-surface-container-high text-on-surface px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+                <span class="material-symbols-outlined text-base">info</span>
+                <span>Dettagli &amp; Accesso sicuro</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Ente 2: Pari Futuro (Autonomia economica) -->
+          <article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm border border-outline-variant/30">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Rete Inclusione Territoriale</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">• 2.4 km</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Sportello Tutela &amp; Autonomia "Pari Futuro"</h4>
+                <p class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">place</span> Corso Europa 88, Milano
+                </p>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary">
+                <span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+              </div>
+            </div>
+            <div class="flex gap-1.5 flex-wrap my-0.5">
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Abuso Finanziario ed Economico</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Consulenza Lavoro &amp; Debito</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Assistenza per conti bancari segregati o sottratti, orientamento alla ricerca attiva di lavoro, sblocco dell'indipendenza abitativa e fondi di microcredito di libertà.
+            </p>
+            <div class="flex items-center gap-space-xs pt-1">
+              <button onclick="alert('Contatto Riservato Pari Futuro:\nSportello ad accesso protetto. Contattabile via app o con numero dedicato non visibile nei registri di chiamata. Orari: Lun-Ven 09:30-17:00.')" class="flex-1 bg-secondary text-on-secondary px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98]">
+                <span class="material-symbols-outlined text-base">lock</span>
+                <span>Contatto riservato</span>
+              </button>
+              <button onclick="alert('Informazioni Pari Futuro:\nServizio accreditato dal Comune e dalla Regione. Supporto legale gratuito per separazione patrimoniale e contrasto alla violenza economica.')" class="flex-1 bg-surface-container-high text-on-surface px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+                <span class="material-symbols-outlined text-base">info</span>
+                <span>Informazioni ente</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Ente 3: Consultorio Familiare Pubblico Territoriale -->
+          <article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm border border-outline-variant/30">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">ASL Sanità Pubblica</span>
+                  <span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">Senza Impegnativa</span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant">• 3.1 km</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Consultorio Familiare Pubblico Territoriale</h4>
+                <p class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-sm">place</span> Piazza Garibaldi 10, Milano
+                </p>
+              </div>
+              <div class="w-9 h-9 rounded-full bg-tertiary/10 flex items-center justify-center shrink-0 text-tertiary">
+                <span class="material-symbols-outlined text-xl">diversity_1</span>
+              </div>
+            </div>
+            <div class="flex gap-1.5 flex-wrap my-0.5">
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Relazione di Coppia &amp; Famiglia</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Spazio Giovani Under 25</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mediazione di coppia, supporto psicologico per relazioni conflittuali o manipolative, tutela della genitorialità e percorsi dedicati ai giovani privi di giudizio.
+            </p>
+            <div class="flex items-center gap-space-xs pt-1">
+              <a href="tel:02888800" class="flex-1 bg-primary text-on-primary px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98]">
+                <span class="material-symbols-outlined text-base">call</span>
+                <span>Chiama in anonimo</span>
+              </a>
+              <button onclick="alert('Orari Sportello Consultorio:\nAccesso libero: Lun-Ven 08:30 - 13:00 e 14:00 - 18:30.\nSpazio Giovani under 25 con accesso diretto gratuito il mercoledì pomeriggio.')" class="flex-1 bg-surface-container-high text-on-surface px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+                <span class="material-symbols-outlined text-base">schedule</span>
+                <span>Orari sportello</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Ente 4: CUAV Uomini -->
+          <article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm border border-outline-variant/30">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">Percorsi Uomini</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">• 4.6 km</span>
+              </div>
+              <h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Spazio di Responsabilità &amp; Cambiamento CUAV</h4>
+              <p class="font-body-sm text-body-sm text-outline flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">place</span> Via della Spiga 22, Milano
+              </p>
+            </div>
+            <div class="w-9 h-9 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 text-secondary">
+              <span class="material-symbols-outlined text-xl">psychology</span>
+            </div>
+            <div class="flex gap-1.5 flex-wrap my-0.5">
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Percorsi per Autori di Violenza</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm">Colloqui Individuali</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Percorsi specialistici per chi riconosce comportamenti di controllo, rabbia o aggressività e sceglie responsabilmente di cambiare. Colloqui riservati con operatori formati.
+            </p>
+            <div class="flex items-center gap-space-xs pt-1">
+              <button onclick="alert('Spazio CUAV Responsabilità:\nProgramma dedicato a uomini che desiderano interrompere dinamiche di violenza o sopraffazione psicologica. Presa in carico volontaria e riservata.')" class="flex-1 bg-surface-container-high text-on-surface px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+                <span class="material-symbols-outlined text-base">info</span>
+                <span>Informazioni percorso</span>
+              </button>
+              <button onclick="alert('Contatto Riservato CUAV:\nNumero di contatto diretto con garanzia di riservatezza e presa in carico guidata.')" class="flex-1 bg-primary text-on-primary px-space-sm py-2 rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98]">
+                <span class="material-symbols-outlined text-base">lock</span>
+                <span>Contatto riservato</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Pulsante Flottante Emergenza "Esci subito" -->
+  <div class="fixed bottom-20 right-4 z-50">
+    <a class="min-h-[44px] h-11 px-4 rounded-full bg-emergency-exit text-on-error font-button-label text-button-label flex items-center gap-1.5 shadow-[0_6px_20px_0_rgba(217,83,79,0.35)] active:scale-95 transition-transform hover:opacity-95" href="https://www.google.com" rel="nofollow noreferrer">
+      <span class="material-symbols-outlined text-[20px]">close</span>
+      <span>Esci subito</span>
+    </a>
+  </div>
+
+<!-- Bottom Navigation Bar (Allineamento orizzontale perfetto su 1 riga) -->
+<nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(32,52,136,0.06)]">
+  <div class="flex justify-between items-center h-16 px-1">
+    
+    <!-- 1. Conoscere -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="conoscere" href="conoscere.html">
+      <span class="material-symbols-outlined text-[22px]">menu_book</span>
+      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Conoscere</span>
+    </a>
+
+    <!-- 2. Riconoscersi -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="riconoscersi" href="riconoscersi.html">
+      <span class="material-symbols-outlined text-[22px]">psychology</span>
+      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Riconoscersi</span>
+    </a>
+
+    <!-- 3. Voci -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="voci" href="voci.html">
+      <span class="material-symbols-outlined text-[22px]">forum</span>
+      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Voci</span>
+    </a>
+
+    <!-- 4. Chiedi aiuto (Evidenziato in rosso, dicitura compatta su 1 riga) -->
+    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 transition-colors min-h-[44px] text-emergency-exit" data-path="chiedere-aiuto" href="chiedere-aiuto.html">
+      <span class="material-symbols-outlined text-[22px]">shield</span>
+      <span class="text-[11px] leading-tight mt-1 font-bold whitespace-nowrap">Chiedi aiuto</span>
+    </a>
+
+  </div>
+</nav>
+
+  <!-- Script Funzionale Esterno -->
+  <script src="js/chiedere-aiuto.js"></script>
+</body>
+</html>
