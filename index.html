@@ -2,208 +2,270 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>PariPasso - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PariPasso — Parità passo dopo passo</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/tailwind-config.js"></script>
   <script src="js/global.js" defer></script>
 </head>
-<body class="bg-surface font-body-default text-body-default text-text-body flex flex-col min-h-screen">
-
-  <!-- Bottone rapido in alto -->
-  <div class="fixed top-2.5 right-3 z-50 pt-safe">
-      <a href="chiedere-aiuto.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-error text-on-error font-button-label text-[13px] font-bold shadow-[0_4px_14px_rgba(186,26,26,0.35)] active:scale-95 transition-transform hover:opacity-95">
-        <span class="material-symbols-outlined text-[17px]">emergency</span>
-        <span class="tracking-wide">Ho bisogno di aiuto!</span>
-      </a>
+<body>
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="bg-orb orb-sky-top"></div>
+    <div class="bg-orb orb-sky-bottom"></div>
+    <div class="bg-orb orb-blush-right"></div>
   </div>
 
-  <main class="flex-1 flex flex-col relative w-full pb-28 px-gutter bg-surface pt-safe">
-    <div class="flex flex-col w-full">
-      <!-- Testata e Logo -->
-      <section class="flex flex-col items-center pt-2 pb-4 text-center">
-        <div class="w-full max-w-[240px] pt-4 mb-3 flex items-center justify-center">
-          <img alt="Logo PariPasso" class="w-full h-auto object-contain drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ92_mk2F_i0tnEpo-WGhA6N7HpfmScGVTz8Q4qYG4ipL0NQhWBHpG4jALMVXCfJps10jPj3tLWL7zGZaQKM6jP0xY8pt2Lj47gc9P5cApjwo2QfYFLafuBG2l4TjzfrqSW5f9-Otkh-IYOGGYnMMwfiYrzkr4QDsMLK_VqvclHMhWNOy59nupQ_lJoOnXzCvQge_-8k_SHokYyohGzkOePDXUWUrfu3kNjx7IIYEd47bOZohhnQeovNESkABrDreR7Ew">
-        </div>
-        <h1 class="font-headline-lg text-headline-lg text-primary-container leading-tight tracking-tight mt-1 max-w-[340px]">
-          Ogni persona conta.<span class="block text-secondary mt-1.5">Ogni situazione merita ascolto.</span>
-        </h1>
-        <p class="font-body-md text-body-md text-on-surface-variant mt-3 max-w-[325px] leading-relaxed">
-          Uno spazio per capire ciò che viviamo, trovare sostegno e costruire insieme una comunità più rispettosa.
-          <span class="block font-semibold text-primary-container mt-2 tracking-wide">Parità Passo Dopo Passo.</span>
-        </p>
-      </section>
+  <header class="site-header pt-safe">
+    <div class="header-inner">
+      <a href="index.html" aria-label="PariPasso Home">
+        <span class="brand-wordmark brand-sm">
+          <span class="brand-pari">Pari</span><span class="brand-p-raised">P</span><span class="brand-asso">asso</span>
+        </span>
+      </a>
 
-      <!-- Hero Visual -->
-      <section class="relative w-full my-3">
-        <div class="relative w-full rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(32,52,136,0.08)] aspect-[16/10] bg-surface-container">
-          <img alt="Accoglienza ed empatia" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1V-d7OhBWj6zeWMmquPe97eA2V0ucn3fGxcZEiRxF6sNHS7iyDElAEwNkrEiCklrNn4GWBLehlF_kOdmABb-4LDWCAm9gf56MjP5bzcCtHESCKTHC-qstIa4_5yPQRCbXsgyZ-tjpXmfAwkg7x_OS0-Wx3mKyXobQrjgrnD-vNXv1nZxhd0ZCx-Nn9w_OJj8ApZoPFwc1csLQy8AO-3xv9ze-_dLL2_YWfrOGaPDzpT7UvcxgA57-sxwWQ">
-          <div class="absolute inset-0 bg-gradient-to-t from-primary-container/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
-              <span class="material-symbols-outlined text-[16px] text-secondary">spa</span>
-              <span class="font-label-sm text-label-sm text-primary-container font-semibold tracking-wide">Un passo alla volta, insieme.</span>
+      <nav class="desktop-nav" aria-label="Navigazione principale">
+        <a href="index.html" data-nav-target="home" class="desktop-nav-link">Home</a>
+        <a href="conoscere.html" data-nav-target="conoscere" class="desktop-nav-link">
+          <span class="material-symbols-outlined icon-md">menu_book</span>Conoscere
+        </a>
+        <a href="riconoscersi.html" data-nav-target="riconoscersi" class="desktop-nav-link">
+          <span class="material-symbols-outlined icon-md">psychology</span>Riconoscersi
+        </a>
+        <a href="voci.html" data-nav-target="voci" class="desktop-nav-link">
+          <span class="material-symbols-outlined icon-md">forum</span>Voci
+        </a>
+        <a href="chiedere-aiuto.html" data-nav-target="chiedere-aiuto" class="desktop-nav-link is-emergency">
+          <span class="material-symbols-outlined icon-md">shield</span>Chiedi aiuto
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="chiedere-aiuto.html" class="btn-help-red">
+          <span class="material-symbols-outlined icon-md">emergency</span>
+          <span>Ho bisogno di aiuto!</span>
+        </a>
+        <a href="https://www.google.com" rel="nofollow noreferrer" class="btn-exit-quick desktop-only-btn quick-exit-trigger">
+          <span class="material-symbols-outlined icon-md">close</span>
+          <span>Esci subito</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <!-- Hero Responsive -->
+    <section class="grid-hero mb-4">
+      <div class="hero-copy-col">
+        <span class="kicker kicker-pink">Prevenzione primaria &amp; Comunità</span>
+        <div class="brand-wordmark brand-hero">
+          <span class="brand-pari">Pari</span><span class="brand-p-raised">P</span><span class="brand-asso">asso</span>
+        </div>
+        <h1 class="hero-headline">
+          Ogni persona conta. <span class="text-pink">Ogni situazione merita ascolto.</span>
+        </h1>
+        <p class="lead-copy" style="max-width: 36rem;">
+          Uno spazio per capire ciò che viviamo, riconoscere i segnali nelle relazioni quotidiane e costruire insieme una comunità più rispettosa.
+          <strong class="text-navy" style="display:block; margin-top:0.35rem;">Parità passo dopo passo.</strong>
+        </p>
+
+        <div class="hero-actions">
+          <a href="conoscere.html" class="btn-navy">
+            <span>Inizia il percorso</span>
+            <span class="material-symbols-outlined icon-md">arrow_forward</span>
+          </a>
+          <a href="riconoscersi.html" class="btn-soft">
+            <span class="material-symbols-outlined icon-md">psychology</span>
+            <span>Fermati e osserva</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="stack-md">
+        <div class="visual-banner">
+          <img
+            alt="Accoglienza ed empatia"
+            src="https://images.unsplash.com/photo-1721059050924-eaf014837bd1?auto=format&fit=crop&w=1200&q=80"
+            onerror="this.style.display='none'"
+          >
+          <div class="visual-banner-overlay"></div>
+          <div class="visual-banner-chip">
+            <span class="material-symbols-outlined icon-sm text-pink">spa</span>
+            <span>Un passo alla volta, insieme.</span>
+          </div>
+        </div>
+
+        <div class="navy-card">
+          <div class="row-start">
+            <div class="icon-badge" style="background: rgba(255,255,255,0.14); color: var(--asso-cyan);">
+              <span class="material-symbols-outlined icon-lg">lock</span>
+            </div>
+            <div>
+              <p class="font-display" style="font-weight: 700; font-size: 0.96rem; color: #ffffff;">
+                100% anonimo, senza account né tracce
+              </p>
+              <p class="small-copy" style="margin-top: 0.25rem;">
+                Nessun profilo registrato o dato personale salvato: naviga in tranquillità al tuo ritmo.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-
-<!-- I 4 Percorsi di PariPasso (Ordine Corretto e Design Uniforme) -->
-<section class="mt-4 mb-3 space-y-3">
-  <div class="flex items-center justify-between px-1 mb-1">
-    <div class="flex items-center gap-2">
-      <div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
-        <span class="material-symbols-outlined text-[18px]">route</span>
       </div>
-      <h2 class="font-headline-sm text-headline-sm text-primary-container font-semibold">I percorsi di PariPasso</h2>
-    </div>
-    <span class="font-label-sm text-label-sm text-secondary font-medium">Esplora e scegli</span>
-  </div>
+    </section>
 
-  <!-- 1. Conoscere per capire -->
-  <a href="conoscere.html" class="group relative flex flex-col p-4 rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(32,52,136,0.05)] active:scale-[0.98] transition-transform overflow-hidden">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
-    <div class="flex items-center justify-between mb-2">
-      <div class="flex items-center gap-2.5 min-w-0">
-        <div class="w-8 h-8 rounded-xl bg-primary-fixed/60 flex items-center justify-center text-primary-container flex-shrink-0">
-          <span class="material-symbols-outlined text-[20px]">menu_book</span>
+    <!-- I 4 Gradini della Scala di PariPasso -->
+    <section class="mb-4">
+      <div class="section-head section-head-row">
+        <div>
+          <span class="kicker kicker-cyan">La «Scala» di PariPasso</span>
+          <h2 class="section-title mt-1">I 4 percorsi graduali</h2>
         </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary-container font-semibold truncate">Conoscere per capire</h3>
+        <span class="small-copy" style="font-weight: 500;">Scegli il gradino più adatto al tuo momento</span>
       </div>
-      <span class="material-symbols-outlined text-primary-container/40 group-hover:text-primary-container transition-colors text-[20px] flex-shrink-0">arrow_forward</span>
-    </div>
-    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-      La parità e il rispetto prendono forma nei gesti di ogni giorno. Articoli e audio-pillole per riconoscere gli stereotipi e le dinamiche di controllo.
-    </p>
-    <div class="mt-3 pt-2.5 flex items-center gap-1.5 text-primary-container font-button-label text-label-sm font-semibold group-hover:text-primary transition-colors">
-      <span>Scopri e approfondisci</span>
-      <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-    </div>
-  </a>
 
-  <!-- 2. Fermati, osserva, riconosci -->
-  <a href="riconoscersi.html" class="group relative flex flex-col p-4 rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(32,52,136,0.05)] active:scale-[0.98] transition-transform overflow-hidden">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
-    <div class="flex items-center justify-between mb-2">
-      <div class="flex items-center gap-2.5 min-w-0">
-        <div class="w-8 h-8 rounded-xl bg-secondary-fixed/50 flex items-center justify-center text-secondary flex-shrink-0">
-          <span class="material-symbols-outlined text-[20px]">psychology</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary-container font-semibold truncate">Fermati, osserva, riconosci</h3>
-      </div>
-      <span class="material-symbols-outlined text-secondary/40 group-hover:text-secondary transition-colors text-[20px] flex-shrink-0">arrow_forward</span>
-    </div>
-    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-      Come stai nelle tue relazioni? Domande maieutiche, riflessioni ed esempi pratici per guardare con consapevolezza ciò che vivi.
-    </p>
-    <div class="mt-3 pt-2.5 flex items-center gap-1.5 text-secondary font-button-label text-label-sm font-semibold group-hover:text-on-secondary-fixed-variant transition-colors">
-      <span>Prenditi un momento per riflettere</span>
-      <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-    </div>
-  </a>
-
-  <!-- 3. Voci della comunità -->
-  <a href="voci.html" class="group relative flex flex-col p-4 rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(32,52,136,0.05)] active:scale-[0.98] transition-transform overflow-hidden">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
-    <div class="flex items-center justify-between mb-2">
-      <div class="flex items-center gap-2.5 min-w-0">
-        <div class="w-8 h-8 rounded-xl bg-primary-fixed flex items-center justify-center text-primary-container flex-shrink-0">
-          <span class="material-symbols-outlined text-[20px]">forum</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-primary-container font-semibold truncate">Voci della comunità</h3>
-      </div>
-      <span class="material-symbols-outlined text-primary-container/40 group-hover:text-primary-container transition-colors text-[20px] flex-shrink-0">arrow_forward</span>
-    </div>
-    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-      Esperienze che aiutano a riconoscersi, confronto anonimo nel forum e opportunità sul territorio per passare all'azione condivisa.
-    </p>
-    <div class="mt-3 pt-2.5 flex items-center gap-1.5 text-primary-container font-button-label text-label-sm font-semibold group-hover:text-primary transition-colors">
-      <span>Leggi, rifletti, partecipa</span>
-      <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-    </div>
-  </a>
-
-  <!-- 4. Trova ascolto e aiuto (Uniformata alle altre, con badge 24/7) -->
-  <a href="chiedere-aiuto.html" class="group relative flex flex-col p-4 rounded-2xl bg-surface-container-lowest shadow-[0_4px_16px_rgba(32,52,136,0.05)] active:scale-[0.98] transition-transform overflow-hidden">
-    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-error"></div>
-    <div class="flex items-center justify-between mb-2">
-      <div class="flex items-center gap-2.5 min-w-0">
-        <div class="w-8 h-8 rounded-xl bg-error-container/60 flex items-center justify-center text-error flex-shrink-0">
-          <span class="material-symbols-outlined text-[20px]">shield</span>
-        </div>
-        <h3 class="font-headline-sm text-headline-sm text-error font-semibold truncate">Trova ascolto e aiuto</h3>
-      </div>
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-bold text-[11px]">
-          24/7
-        </span>
-        <span class="material-symbols-outlined text-error/40 group-hover:text-error transition-colors text-[20px] flex-shrink-0">arrow_forward</span>
-      </div>
-    </div>
-    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-      Linee di emergenza (1522), mappatura dei Centri Antiviolenza autorizzati, consultori e percorsi protetti ad accesso anonimo.
-    </p>
-    <div class="mt-3 pt-2.5 flex items-center gap-1.5 text-error font-button-label text-label-sm font-semibold group-hover:text-on-error-container transition-colors">
-      <span>Scopri a chi rivolgerti</span>
-      <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-    </div>
-  </a>
-
-</section>
-      <!-- Badge Privacy -->
-      <section class="mt-4 mb-2">
-        <div class="bg-surface-container-low rounded-2xl p-3.5 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary-container flex-shrink-0 shadow-sm">
-            <span class="material-symbols-outlined text-[18px]">lock</span>
+      <div class="grid-2">
+        <!-- Gradino 1 -->
+        <a href="conoscere.html" class="editorial-card editorial-card-interactive accent-cyan">
+          <div>
+            <div class="row-between-start mb-2">
+              <div class="row-start" style="align-items: center;">
+                <div class="icon-badge bg-soft-cyan">
+                  <span class="material-symbols-outlined icon-lg">menu_book</span>
+                </div>
+                <div>
+                  <span class="kicker kicker-cyan">Gradino 01</span>
+                  <h3 class="card-title">Conoscere per capire</h3>
+                </div>
+              </div>
+              <span class="material-symbols-outlined icon-md text-navy">arrow_forward</span>
+            </div>
+            <p class="body-copy">
+              Dare un nome chiaro agli stereotipi, al controllo camuffato da premura e alla violenza economica attraverso articoli e audio-pillole.
+            </p>
           </div>
-          <div class="flex-1 min-w-0">
-            <p class="font-label-md text-label-md text-primary-container font-semibold leading-tight">100% anonimo e sicuro</p>
-            <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Nessun dato viene salvato o tracciato durante la navigazione.</p>
+          <div class="card-footer-link text-cyan">
+            <span>Scopri e approfondisci</span>
+            <span class="material-symbols-outlined icon-sm">arrow_forward</span>
           </div>
-        </div>
-      </section>
-    </div>
+        </a>
+
+        <!-- Gradino 2 -->
+        <a href="riconoscersi.html" class="editorial-card editorial-card-interactive accent-pink">
+          <div>
+            <div class="row-between-start mb-2">
+              <div class="row-start" style="align-items: center;">
+                <div class="icon-badge bg-soft-pink">
+                  <span class="material-symbols-outlined icon-lg">psychology</span>
+                </div>
+                <div>
+                  <span class="kicker kicker-pink">Gradino 02</span>
+                  <h3 class="card-title">Fermati, osserva, riconosci</h3>
+                </div>
+              </div>
+              <span class="material-symbols-outlined icon-md text-pink">arrow_forward</span>
+            </div>
+            <p class="body-copy">
+              Autoconsapevolezza relazionale senza voti né etichette: domande guidate per chi subisce pressioni, per chi le esercita e per chi sta vicino.
+            </p>
+          </div>
+          <div class="card-footer-link text-pink">
+            <span>Prenditi un momento per riflettere</span>
+            <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+          </div>
+        </a>
+
+        <!-- Gradino 3 -->
+        <a href="voci.html" class="editorial-card editorial-card-interactive accent-navy">
+          <div>
+            <div class="row-between-start mb-2">
+              <div class="row-start" style="align-items: center;">
+                <div class="icon-badge bg-soft-navy">
+                  <span class="material-symbols-outlined icon-lg">forum</span>
+                </div>
+                <div>
+                  <span class="kicker kicker-navy">Gradino 03</span>
+                  <h3 class="card-title">Comunità che si attiva</h3>
+                </div>
+              </div>
+              <span class="material-symbols-outlined icon-md text-navy">arrow_forward</span>
+            </div>
+            <p class="body-copy">
+              Confronto anonimo e moderato su autonomia economica, segnali d’allarme e domande agli esperti, insieme alle iniziative sul territorio.
+            </p>
+          </div>
+          <div class="card-footer-link text-navy">
+            <span>Leggi, rifletti, partecipa</span>
+            <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+          </div>
+        </a>
+
+        <!-- Gradino 4 -->
+        <a href="chiedere-aiuto.html" class="editorial-card editorial-card-interactive accent-red">
+          <div>
+            <div class="row-between-start mb-2">
+              <div class="row-start" style="align-items: center;">
+                <div class="icon-badge bg-soft-error">
+                  <span class="material-symbols-outlined icon-lg">shield</span>
+                </div>
+                <div>
+                  <span class="kicker kicker-error">Gradino 04 • Rete 24/7</span>
+                  <h3 class="card-title text-error">Trova ascolto e aiuto</h3>
+                </div>
+              </div>
+              <span class="pill-badge bg-soft-error">1522 / 112</span>
+            </div>
+            <p class="body-copy">
+              Accesso riservato ai presìdi del territorio: Centri Antiviolenza (CAV), consultori, sportelli legali ed economici e numeri di emergenza h24.
+            </p>
+          </div>
+          <div class="card-footer-link text-error">
+            <span>Scopri a chi rivolgerti</span>
+            <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Chiusura coerente con la presentazione -->
+    <section class="editorial-card card-tint-cyan text-center" style="padding: 1.5rem 1.25rem;">
+      <span class="kicker kicker-navy mb-1">La nostra direzione</span>
+      <p class="font-display" style="font-weight: 700; font-size: 1.15rem; color: var(--ink-primary);">
+        «Il rispetto nasce dalle relazioni. <span class="text-navy">Il cambiamento nasce da noi.</span>»
+      </p>
+    </section>
   </main>
 
-  <!-- Pulsante Emergenza Flottante "Esci Subito" -->
-  <div class="fixed bottom-20 right-4 z-50">
-    <a class="min-h-[44px] h-11 px-4 rounded-full bg-emergency-exit text-on-error font-button-label text-button-label flex items-center gap-1.5 shadow-[0_6px_20px_0_rgba(217,83,79,0.35)] active:scale-95 transition-transform hover:opacity-95" href="https://www.google.com" rel="nofollow noreferrer">
-      <span class="material-symbols-outlined text-[20px]">close</span>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span><strong>PariPasso</strong> · Progetto di prevenzione e comunità (Tech Warriors)</span>
+      <span>Emergenze: <strong>1522</strong> (Antiviolenza h24 gratuito) · <strong>112</strong> (Pericolo immediato)</span>
+    </div>
+  </footer>
+
+  <div class="mobile-quick-exit">
+    <a href="https://www.google.com" rel="nofollow noreferrer" class="btn-exit-quick quick-exit-trigger">
+      <span class="material-symbols-outlined icon-md">close</span>
       <span>Esci subito</span>
     </a>
   </div>
 
-<!-- Bottom Navigation Bar (Allineamento orizzontale perfetto su 1 riga) -->
-<nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(32,52,136,0.06)]">
-  <div class="flex justify-between items-center h-16 px-1">
-    
-    <!-- 1. Conoscere -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="conoscere" href="conoscere.html">
-      <span class="material-symbols-outlined text-[22px]">menu_book</span>
-      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Conoscere</span>
-    </a>
-
-    <!-- 2. Riconoscersi -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="riconoscersi" href="riconoscersi.html">
-      <span class="material-symbols-outlined text-[22px]">psychology</span>
-      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Riconoscersi</span>
-    </a>
-
-    <!-- 3. Voci -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="voci" href="voci.html">
-      <span class="material-symbols-outlined text-[22px]">forum</span>
-      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Voci</span>
-    </a>
-
-    <!-- 4. Chiedi aiuto (Evidenziato in rosso, dicitura compatta su 1 riga) -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 transition-colors min-h-[44px] text-emergency-exit" data-path="chiedere-aiuto" href="chiedere-aiuto.html">
-      <span class="material-symbols-outlined text-[22px]">shield</span>
-      <span class="text-[11px] leading-tight mt-1 font-bold whitespace-nowrap">Chiedi aiuto</span>
-    </a>
-
-  </div>
-</nav>
-
+  <nav class="bottom-nav pb-safe" aria-label="Menu mobile">
+    <div class="bottom-nav-inner">
+      <a class="bottom-nav-link" data-nav-target="conoscere" href="conoscere.html">
+        <span class="material-symbols-outlined icon-lg">menu_book</span>
+        <span>Conoscere</span>
+      </a>
+      <a class="bottom-nav-link" data-nav-target="riconoscersi" href="riconoscersi.html">
+        <span class="material-symbols-outlined icon-lg">psychology</span>
+        <span>Riconoscersi</span>
+      </a>
+      <a class="bottom-nav-link" data-nav-target="voci" href="voci.html">
+        <span class="material-symbols-outlined icon-lg">forum</span>
+        <span>Voci</span>
+      </a>
+      <a class="bottom-nav-link is-emergency" data-nav-target="chiedere-aiuto" href="chiedere-aiuto.html">
+        <span class="material-symbols-outlined icon-lg">shield</span>
+        <span>Chiedi aiuto</span>
+      </a>
+    </div>
+  </nav>
 </body>
 </html>

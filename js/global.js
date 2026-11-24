@@ -1,24 +1,41 @@
+/**
+ * Logica globale PariPasso:
+ * - Evidenziazione attiva sincronizzata su Top Nav (Desktop) e Bottom Nav (Mobile)
+ * - Uscita rapida sicura (location.replace)
+ * - Chiusura modali con ESC
+ */
 document.addEventListener('DOMContentLoaded', () => {
-  // Evidenzia automaticamente la scheda corretta nella barra di navigazione inferiore
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('nav a[data-path]');
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('[data-nav-target]');
 
-  navLinks.forEach(link => {
-    const target = link.getAttribute('data-path');
-    const isCurrent = (currentPath.includes(target)) || (target === 'home' && currentPath === 'index.html');
+  navLinks.forEach((link) => {
+    const target = link.getAttribute('data-nav-target');
+    const isMatch =
+      (target === 'home' && (path === '' || path === 'index.html')) ||
+      (target !== 'home' && path.includes(target));
 
-    if (isCurrent && target !== 'chiedere-aiuto') {
-      link.classList.remove('text-text-muted');
-      link.classList.add('text-primary-container', 'font-semibold');
+    if (isMatch) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'page');
     }
   });
 
-  // Gestione click su elementi con attributo data-nav
-  document.querySelectorAll('[data-nav]').forEach(el => {
-    el.addEventListener('click', (e) => {
+  document.querySelectorAll('.quick-exit-trigger').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const destination = el.getAttribute('data-nav');
-      window.location.href = `${destination}.html`;
+      try {
+        window.location.replace('https://www.google.com');
+      } catch (_) {
+        window.location.href = 'https://www.google.com';
+      }
     });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.pp-modal-backdrop.is-open').forEach((modal) => {
+        modal.classList.remove('is-open');
+      });
+    }
   });
 });

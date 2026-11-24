@@ -2,432 +2,436 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <meta name="shell-type" content="mobile_tab">
-  <title>PariPasso - Conoscere per capire</title>
-  
-  <!-- CSS Globale -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PariPasso — Conoscere per capire</title>
   <link rel="stylesheet" href="css/main.css">
-  
-  <!-- Tailwind Engine & Configurazione Esterna -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="js/tailwind-config.js"></script>
-  
-  <!-- Script Globale (Gestione Navigazione ed Emergenza) -->
   <script src="js/global.js" defer></script>
+  <script src="js/conoscere.js" defer></script>
 </head>
-<body class="bg-surface font-body-default text-body-default text-text-body flex flex-col min-h-screen">
+<body>
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="bg-orb orb-sky-top"></div>
+    <div class="bg-orb orb-sky-bottom"></div>
+    <div class="bg-orb orb-blush-right"></div>
+  </div>
 
-<main class="flex-1 flex flex-col relative w-full pt-safe pb-28 px-gutter bg-surface">
-  <div class="flex flex-col w-full">
-
-    <!-- Header Comune -->
-    <header class="w-full flex items-center justify-between pt-3 pb-1 mb-1">
-      <a href="index.html" class="inline-flex items-center active:opacity-80 transition-opacity">
-        <img alt="PariPasso" class="h-9 w-auto object-contain max-w-[150px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsCx-cf6jm3NFr5CmhjViNct7pTViHewo5bfRZCjzlsLIdG4dgL87BRVST3KLCyhW21QmoSGWuKgo6WdQwML7cjesth0G1YOqJoDeAJv2rML6XT6JChNG5GF_0ZgS-DAtL5wTtcz-VjcpeMS2CMtW_iGuw7D5S8_eQZxsgtZdAgjA84e0KsmIidDnuGnYDww_waJhMjdwbZgRt0vlx23MtX8gx7p3x4IwHnGga5KZxUtoNABLjfpEWIBVPZ7hJuliFhb4">
+  <header class="site-header pt-safe">
+    <div class="header-inner">
+      <a href="index.html" aria-label="PariPasso Home">
+        <span class="brand-wordmark brand-sm">
+          <span class="brand-pari">Pari</span><span class="brand-p-raised">P</span><span class="brand-asso">asso</span>
+        </span>
       </a>
-      <a href="chiedere-aiuto.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-error text-on-error font-button-label text-[13px] font-bold shadow-[0_4px_14px_rgba(186,26,26,0.35)] active:scale-95 transition-transform hover:opacity-95">
-        <span class="material-symbols-outlined text-[17px]">emergency</span>
-        <span class="tracking-wide">Ho bisogno di aiuto!</span>
-      </a>
-    </header>
+      <nav class="desktop-nav" aria-label="Navigazione principale">
+        <a href="index.html" data-nav-target="home" class="desktop-nav-link">Home</a>
+        <a href="conoscere.html" data-nav-target="conoscere" class="desktop-nav-link">
+          <span class="material-symbols-outlined icon-md">menu_book</span>Conoscere
+        </a>
+        <a href="riconoscersi.html" data-nav-target="riconoscersi" class="desktop-nav-link">
+          <span class="material-symbols-outlined icon-md">psychology</span>Riconoscersi
+        </a>
+        <a href="voci.html" data-nav-target="voci" class="desktop-nav-link">
+          <span class="material-symbols-outlined icon-md">forum</span>Voci
+        </a>
+        <a href="chiedere-aiuto.html" data-nav-target="chiedere-aiuto" class="desktop-nav-link is-emergency">
+          <span class="material-symbols-outlined icon-md">shield</span>Chiedi aiuto
+        </a>
+      </nav>
+      <div class="header-actions">
+        <a href="chiedere-aiuto.html" class="btn-help-red">
+          <span class="material-symbols-outlined icon-md">emergency</span>
+          <span>Ho bisogno di aiuto!</span>
+        </a>
+        <a href="https://www.google.com" rel="nofollow noreferrer" class="btn-exit-quick desktop-only-btn quick-exit-trigger">
+          <span class="material-symbols-outlined icon-md">close</span>
+          <span>Esci subito</span>
+        </a>
+      </div>
+    </div>
+  </header>
 
-    <!-- Titolo Diretto su sfondo (senza il riquadro bianco che lo isolava) -->
-    <section class="flex flex-col gap-1 mb-3">
-      <h1 class="text-[26px] font-extrabold text-primary leading-tight tracking-tight">
-        Conoscere per capire
-      </h1>
-      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-        La parità e il rispetto prendono forma nei gesti di ogni giorno. Partiamo dalle situazioni che viviamo per comprendere gli stereotipi, riconoscere il controllo e dare un nome alle diverse forme di violenza.
-      </p>
+  <main class="app-main">
+    <section class="grid-hero mb-4">
+      <div class="stack-xs">
+        <span class="kicker kicker-cyan">Gradino 01 · Informazione &amp; Prevenzione</span>
+        <h1 class="page-title">Conoscere per capire</h1>
+        <p class="lead-copy mt-1">
+          La parità e il rispetto prendono forma nei gesti di ogni giorno. Partiamo dalle situazioni che viviamo per comprendere gli stereotipi, riconoscere il controllo mascherato da premura e dare un nome alle diverse forme di violenza.
+        </p>
+      </div>
+      <div class="visual-banner">
+        <img
+          src="https://images.unsplash.com/photo-1725582204163-46d1f246ecd6?auto=format&fit=crop&w=1200&q=80"
+          alt="Spazio sicuro e informativo"
+          onerror="this.style.display='none'"
+        >
+        <div class="visual-banner-overlay"></div>
+        <div class="visual-banner-chip">
+          <span class="material-symbols-outlined icon-sm">spa</span>
+          <span>Spazio sicuro &amp; accogliente</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Immagine con badge -->
-    <div class="w-full overflow-hidden rounded-2xl shadow-sm relative mb-4">
-      <img src="https://lh3.googleusercontent.com/aida/AEtjO1V-d7OhBWj6zeWMmquPe97eA2V0ucn3fGxcZEiRxF6sNHS7iyDElAEwNkrEiCklrNn4GWBLehlF_kOdmABb-4LDWCAm9gf56MjP5bzcCtHESCKTHC-qstIa4_5yPQRCbXsgyZ-tjpXmfAwkg7x_OS0-Wx3mKyXobQrjgrnD-vNXv1nZxhd0ZCx-Nn9w_OJj8ApZoPFwc1csLQy8AO-3xv9ze-_dLL2_YWfrOGaPDzpT7UvcxgA57-sxwWQ" alt="Spazio sicuro" class="w-full h-48 object-cover object-center">
-      <div class="absolute bottom-2.5 left-2.5 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-xl flex items-center gap-1.5 shadow-sm">
-        <span class="material-symbols-outlined text-primary text-[17px]">spa</span>
-        <span class="text-label-sm text-primary font-semibold">Spazio sicuro &amp; accogliente</span>
+    <!-- Ricerca & Filtri -->
+    <section class="editorial-card mb-4 stack-sm">
+      <div class="search-box">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input id="guide-search" type="search" class="input-field input-search" placeholder="Cerca per parole chiave (es. controllo, economica, parità, 1522)...">
       </div>
-    </div>
-      <!-- Search Bar & Filters -->
-      <section class="w-full mb-6">
-        <div class="relative w-full mb-3">
-          <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
-          <input class="w-full pl-10 pr-4 py-3 rounded-xl bg-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:bg-surface-container-lowest transition-all" id="guide-search" placeholder="Cerca per parole chiave (es. controllo, parità)..." type="search">
-        </div>
-        <div class="flex gap-2 overflow-x-auto pb-1 scrollbar-none -mx-gutter px-gutter">
-          <button class="filter-chip active shrink-0 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-category="all">Tutti</button>
-          <button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-category="parita">Parità &amp; Quotidiano</button>
-          <button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-category="consapevolezza">Consapevolezza &amp; Ascolto</button>
-          <button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-category="segnali">Campanelli &amp; Confini</button>
-          <button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-category="aiuto">Supporto &amp; Aiuto</button>
-          <button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-category="famiglia">Famiglia &amp; Testimoni</button>
-          <button class="filter-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all active:scale-95 shadow-sm" data-category="diritti">Diritti &amp; Territorio</button>
-        </div>
-      </section>
+      <div class="filter-scroll scrollbar-none" id="guide-filters">
+        <button type="button" class="filter-pill is-active" data-category="all">Tutti</button>
+        <button type="button" class="filter-pill" data-category="parita">Parità &amp; Quotidiano</button>
+        <button type="button" class="filter-pill" data-category="consapevolezza">Consapevolezza</button>
+        <button type="button" class="filter-pill" data-category="segnali">Campanelli &amp; Confini</button>
+        <button type="button" class="filter-pill" data-category="aiuto">Supporto &amp; Aiuto</button>
+        <button type="button" class="filter-pill" data-category="famiglia">Famiglia &amp; Testimoni</button>
+        <button type="button" class="filter-pill" data-category="diritti">Diritti &amp; Territorio</button>
+      </div>
+    </section>
 
-      <!-- Articles List -->
-      <section class="flex flex-col gap-3.5 w-full mb-8" id="articles-container">
-        
-        <!-- Articolo 1 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="parita">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm">Parità &amp; Relazioni</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Vita quotidiana</span>
+    <!-- Griglia Articoli & Audio-pillole -->
+    <section class="grid-2 mb-4" id="articles-container">
+
+      <!-- Articolo 1 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="parita">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-cyan">Parità &amp; Relazioni</span>
+              <span class="pill-badge bg-soft-gray">Vita quotidiana</span>
             </div>
-            <span class="text-label-md text-outline shrink-0">4 min</span>
+            <span class="small-copy" style="font-weight: 600;">4 min</span>
           </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Parità di genere: che cosa significa e come realizzarla nella vita quotidiana
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Oltre i grandi principi teorici, la parità si costruisce nella divisione equa della cura, nella valorizzazione delle scelte personali e nel rifiuto di ruoli prestabiliti all'interno della coppia e della famiglia.
+          <h2 class="card-title mb-2">Parità di genere: che cosa significa e come realizzarla nella vita quotidiana</h2>
+          <p class="body-copy">
+            Oltre i grandi principi teorici, la parità si costruisce nella divisione equa della cura, nella valorizzazione delle scelte personali e nel rifiuto di ruoli prestabiliti nella coppia e in famiglia.
           </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi l'articolo completo</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="1">
+          <span>Leggi l'articolo completo</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
+        </button>
+      </article>
 
-        <!-- Audio-pillola 1 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md border border-[#f0e6dc]" data-category="consapevolezza">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm flex items-center gap-1">
-                <span class="material-symbols-outlined text-[13px]">headphones</span>Audio-pillola • 1 min
+      <!-- Audio-pillola 1 -->
+      <article class="article-card editorial-card card-tint-cyan" data-category="consapevolezza" style="justify-content: space-between;">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-navy">
+                <span class="material-symbols-outlined icon-sm">headphones</span>Audio-pillola • 1 min
               </span>
-              <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm">Consapevolezza</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Green Flag</span>
+              <span class="pill-badge bg-soft-cyan">Consapevolezza</span>
             </div>
-            <span class="text-label-md text-outline shrink-0">1 min</span>
+            <span class="small-copy" style="font-weight: 600;">60 sec</span>
           </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">Ascolta in cuffia: Consapevolezza e Respiro</h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+          <h2 class="card-title mb-2">Ascolta in cuffia: Consapevolezza e Respiro</h2>
+          <p class="body-copy">
             Respiro e ricentratura quando senti tensione o confusione interiore: uno spazio discreto di un minuto per ritrovare calma e chiarezza nei tuoi ritmi.
           </p>
-          <div class="w-full bg-[#fdf8f2] border border-[#f0e6dc] rounded-2xl p-3.5 flex items-center justify-between gap-3">
-            <div class="flex items-center gap-3 min-w-0 flex-1">
-              <button class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md active:scale-95 transition-transform hover:opacity-95" aria-label="Riproduci audio-pillola">
-                <span class="material-symbols-outlined text-[24px] ml-0.5">play_arrow</span>
+        </div>
+        <div class="audio-box">
+          <div class="row-between">
+            <div class="row-start min-w-0 flex-1" style="align-items: center;">
+              <button type="button" class="audio-play-btn" data-audio-id="1" aria-label="Riproduci audio-pillola">
+                <span class="material-symbols-outlined icon-lg">play_arrow</span>
               </button>
-              <div class="flex flex-col min-w-0">
-                <span class="font-headline-sm text-[14px] font-bold text-on-surface leading-tight truncate">Ascolta audio-pillola (1 min)</span>
-                <span class="font-body-sm text-[12px] text-on-surface-variant truncate">Voce guida • 60 secondi</span>
+              <div class="min-w-0">
+                <div class="audio-status" style="font-size: 0.86rem; font-weight: 700; color: var(--ink-primary);">Ascolta audio-pillola (1 min)</div>
+                <div class="audio-timer small-copy">00:00 / 01:00</div>
               </div>
             </div>
-            <div class="flex items-end gap-1 h-7 shrink-0 pr-1" aria-hidden="true">
-              <span class="w-1 bg-[#8fa1fb] rounded-full h-3"></span>
-              <span class="w-1 bg-primary rounded-full h-6"></span>
-              <span class="w-1 bg-[#7e4b87] rounded-full h-4"></span>
-              <span class="w-1 bg-[#40b5cf] rounded-full h-6"></span>
-              <span class="w-1 bg-primary rounded-full h-3.5"></span>
+            <div class="audio-waves" aria-hidden="true">
+              <span style="height: 12px; background: var(--asso-cyan);"></span>
+              <span style="height: 22px; background: var(--passo-navy);"></span>
+              <span style="height: 15px; background: var(--pari-pink);"></span>
+              <span style="height: 24px; background: var(--asso-cyan);"></span>
+              <span style="height: 13px; background: var(--passo-navy);"></span>
             </div>
           </div>
-        </article>
+          <div class="audio-progress-track">
+            <div class="audio-progress-fill" id="audio-progress-1"></div>
+          </div>
+        </div>
+      </article>
 
-        <!-- Articolo 2 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="consapevolezza">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm">Consapevolezza</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Definizioni</span>
+      <!-- Articolo 2 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="consapevolezza">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-pink">Consapevolezza</span>
+              <span class="pill-badge bg-soft-gray">Il sommerso</span>
             </div>
-            <span class="text-label-md text-outline shrink-0">6 min</span>
+            <span class="small-copy" style="font-weight: 600;">6 min</span>
           </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Violenza sulle donne: che cos'è, quali forme assume e come riconoscerla
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Fisica, psicologica, economica, sessuale o digitale: comprendere le sfumature e le dinamiche con cui si manifesta la prevaricazione per non minimizzare mai l'impatto sulla libertà personale.
+          <h2 class="card-title mb-2">Violenza sulle donne: che cos'è, quali forme assume e come riconoscerla</h2>
+          <p class="body-copy">
+            Fisica, psicologica, economica, sessuale o digitale: comprendere la gradualità e l'area del sommerso per non minimizzare mai ciò che toglie respiro e libertà.
           </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi l'articolo completo</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="2">
+          <span>Leggi l'articolo completo</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
+        </button>
+      </article>
 
-        <!-- Articolo 3 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="segnali">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container text-label-sm">Campanelli d'allarme</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Autotutela</span>
+      <!-- Articolo 3 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="segnali">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-error">Campanelli d'allarme</span>
+              <span class="pill-badge bg-soft-gray">Controllo</span>
             </div>
-            <span class="text-label-md text-outline shrink-0">5 min</span>
+            <span class="small-copy" style="font-weight: 600;">5 min</span>
           </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Segnali da non sottovalutare: come individuare comportamenti di controllo, manipolazione e abuso
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Isolamento progressivo, svalutazione sistematica, controllo dei contatti o del denaro: impariamo a distinguere l'affetto autentico dalle trappole del possesso sottile e del gaslighting.
+          <h2 class="card-title mb-2">Segnali da non sottovalutare: controllo mascherato da affetto e violenza economica</h2>
+          <p class="body-copy">
+            Posizione GPS, controllo delle spese, isolamento dalle amicizie: impariamo a distinguere l'interesse autentico che lascia spazio dal controllo che riduce la libertà.
           </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi l'articolo completo</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="3">
+          <span>Leggi l'articolo completo</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
+        </button>
+      </article>
 
-        <!-- Audio-pillola 2 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md border border-[#f0e6dc]" data-category="segnali">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm flex items-center gap-1">
-                <span class="material-symbols-outlined text-[13px]">headphones</span>Audio-pillola • 1 min
+      <!-- Audio-pillola 2 -->
+      <article class="article-card editorial-card card-tint-pink" data-category="segnali" style="justify-content: space-between;">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-navy">
+                <span class="material-symbols-outlined icon-sm">headphones</span>Audio-pillola • 1 min
               </span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Confini &amp; Rispetto</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container text-label-sm">Autonomia</span>
+              <span class="pill-badge bg-soft-pink">Confini &amp; Rispetto</span>
             </div>
-            <span class="text-label-md text-outline shrink-0">1 min</span>
+            <span class="small-copy" style="font-weight: 600;">60 sec</span>
           </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">Confini &amp; Rispetto: distinguere cura e controllo</h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+          <h2 class="card-title mb-2">Confini &amp; Rispetto: distinguere cura e controllo</h2>
+          <p class="body-copy">
             Nelle relazioni sane la premura sostiene la libertà e non la restringe. Una guida audio essenziale per riconoscere quando la gelosia supera il confine.
           </p>
-          <div class="w-full bg-[#fdf8f2] border border-[#f0e6dc] rounded-2xl p-3.5 flex items-center justify-between gap-3">
-            <div class="flex items-center gap-3 min-w-0 flex-1">
-              <button class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md active:scale-95 transition-transform hover:opacity-95" aria-label="Riproduci audio-pillola">
-                <span class="material-symbols-outlined text-[24px] ml-0.5">play_arrow</span>
+        </div>
+        <div class="audio-box">
+          <div class="row-between">
+            <div class="row-start min-w-0 flex-1" style="align-items: center;">
+              <button type="button" class="audio-play-btn is-pink" data-audio-id="2" aria-label="Riproduci audio-pillola">
+                <span class="material-symbols-outlined icon-lg">play_arrow</span>
               </button>
-              <div class="flex flex-col min-w-0">
-                <span class="font-headline-sm text-[14px] font-bold text-on-surface leading-tight truncate">Ascolta audio-pillola (1 min)</span>
-                <span class="font-body-sm text-[12px] text-on-surface-variant truncate">Spunti pratici • 60 secondi</span>
+              <div class="min-w-0">
+                <div class="audio-status" style="font-size: 0.86rem; font-weight: 700; color: var(--ink-primary);">Ascolta audio-pillola (1 min)</div>
+                <div class="audio-timer small-copy">00:00 / 01:00</div>
               </div>
             </div>
-            <div class="flex items-end gap-1 h-7 shrink-0 pr-1" aria-hidden="true">
-              <span class="w-1 bg-[#40b5cf] rounded-full h-4"></span>
-              <span class="w-1 bg-primary rounded-full h-6"></span>
-              <span class="w-1 bg-[#7e4b87] rounded-full h-3"></span>
-              <span class="w-1 bg-[#8fa1fb] rounded-full h-5"></span>
-              <span class="w-1 bg-primary rounded-full h-4"></span>
+            <div class="audio-waves" aria-hidden="true">
+              <span style="height: 15px; background: var(--pari-pink);"></span>
+              <span style="height: 24px; background: var(--passo-navy);"></span>
+              <span style="height: 12px; background: var(--asso-cyan);"></span>
+              <span style="height: 20px; background: var(--pari-pink-dark);"></span>
+              <span style="height: 15px; background: var(--passo-navy);"></span>
             </div>
           </div>
-        </article>
-
-        <!-- Articolo 4 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="aiuto">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm">Supporto Immediato</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Pronto Intervento</span>
-            </div>
-            <span class="text-label-md text-outline shrink-0">3 min</span>
+          <div class="audio-progress-track">
+            <div class="audio-progress-fill" id="audio-progress-2"></div>
           </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Chiedere aiuto: a chi rivolgersi, quali servizi sono disponibili e come trovare protezione
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Dal numero verde nazionale 1522 ai percorsi protetti di accoglienza e ascolto anonimo: cosa succede quando contatti un operatore e come pianificare i primi passi in sicurezza.
-          </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi la guida pratica</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
-
-        <!-- Articolo 5 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="famiglia">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm">Rete di vicinanza</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Ruoli di supporto</span>
-            </div>
-            <span class="text-label-md text-outline shrink-0">5 min</span>
-          </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Per familiari, amici e testimoni: come intervenire e sostenere una persona in difficoltà
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Cosa dire e cosa evitare quando temi che una persona cara viva una relazione opprimente. Come offrire una presenza costante e non giudicante senza forzare i tempi.
-          </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi l'articolo completo</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
-
-        <!-- Articolo 6 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="parita">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-label-sm">Educazione</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Nuove generazioni</span>
-            </div>
-            <span class="text-label-md text-outline shrink-0">5 min</span>
-          </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Educazione e prevenzione: percorsi per scuole, giovani, genitori e uomini
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Decostruire modelli tossici attraverso l'educazione all'affettività e al consenso. Il ruolo cruciale del coinvolgimento maschile e delle aule scolastiche nella prevenzione precoce.
-          </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi l'articolo completo</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
-
-        <!-- Articolo 7 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="diritti">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm">Tutele Legali</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Diritti</span>
-            </div>
-            <span class="text-label-md text-outline shrink-0">6 min</span>
-          </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Diritti e tutele: informazioni sui diritti delle donne e sugli strumenti di protezione
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Misure di allontanamento, ordini di protezione, patrocinio a spese dello Stato e tutele sul lavoro: il quadro normativo a salvaguardia della persona e dei figli minori.
-          </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi la guida legale</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
-
-        <!-- Articolo 8 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="diritti">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-sm">Territorio</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Presidi Attivi</span>
-            </div>
-            <span class="text-label-md text-outline shrink-0">4 min</span>
-          </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            La rete del territorio: centri antiviolenza, servizi sociali, istituzioni, associazioni e professionisti
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Una mappatura capillare delle realtà locali che operano in sinergia per offrire sostegno psicologico, legale, abitativo e di reinserimento lavorativo in ogni provincia.
-          </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Esplora la rete locale</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
-
-        <!-- Articolo 9 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="all">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm">Esperienze</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Testimonianze</span>
-            </div>
-            <span class="text-label-md text-outline shrink-0">7 min</span>
-          </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Storie, esperienze e testimonianze: per riconoscersi, comprendere e superare stereotipi e pregiudizi
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Racconti in prima persona di chi ha attraversato la nebbia del controllo e trovato la via d'uscita. La forza delle parole condivise per rompere il senso di solitudine e colpa.
-          </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Leggi le storie</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
-
-        <!-- Articolo 10 -->
-        <article class="article-card w-full bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all hover:shadow-md" data-category="parita">
-          <div class="flex items-center justify-between gap-2 mb-2.5">
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant text-label-sm">Comunità attiva</span>
-              <span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm">Partecipazione</span>
-            </div>
-            <span class="text-label-md text-outline shrink-0">4 min</span>
-          </div>
-          <h2 class="font-headline-md text-headline-md text-on-surface mb-2 leading-snug font-bold">
-            Cosa possiamo fare insieme: iniziative, eventi, progetti e azioni concrete per costruire una comunità più rispettosa
-          </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-            Dalle iniziative di quartiere ai workshop aziendali, dai presidi culturali alle campagne di sensibilizzazione: le opportunità per dare il proprio contributo civico attivo.
-          </p>
-          <a class="inline-flex items-center gap-1.5 text-primary-container font-label-lg text-label-lg active:opacity-80" href="#">
-            <span>Scopri come partecipare</span>
-            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-          </a>
-        </article>
-
-      </section>
-
-      <!-- Empty State (Nessun Risultato) -->
-      <div class="hidden w-full py-12 px-4 flex flex-col items-center text-center bg-surface-container-lowest rounded-xl shadow-sm mb-8" id="no-results">
-        <div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center mb-3">
-          <span class="material-symbols-outlined text-outline text-[28px]">search_off</span>
         </div>
-        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">Nessuna guida trovata</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
-          Prova a cercare con altri termini o ripristina i filtri per consultare tutti i contenuti.
-        </p>
-        <button class="mt-4 px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md active:scale-95 transition-transform" id="reset-filters">
-          Mostra tutti gli articoli
+      </article>
+
+      <!-- Articolo 4 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="aiuto">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-error">Supporto Immediato</span>
+              <span class="pill-badge bg-soft-gray">1522 &amp; CAV</span>
+            </div>
+            <span class="small-copy" style="font-weight: 600;">3 min</span>
+          </div>
+          <h2 class="card-title mb-2">Chiedere aiuto: a chi rivolgersi, quali servizi esistono e come trovare protezione</h2>
+          <p class="body-copy">
+            Dal numero verde 1522 ai Centri Antiviolenza sul territorio: cosa succede quando contatti un operatore e come muovere i primi passi in sicurezza.
+          </p>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="4">
+          <span>Leggi la guida pratica</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
         </button>
-      </div>
+      </article>
 
-      <!-- Support Banner 1522 -->
-      <aside class="w-full bg-surface-container-low rounded-xl p-5 mb-4 shadow-sm flex items-start gap-4">
-        <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
-          <span class="material-symbols-outlined text-on-secondary-container text-[20px]">phone_in_talk</span>
-        </div>
-        <div class="flex-1">
-          <h4 class="font-headline-sm text-headline-sm text-on-surface mb-1 font-bold">Hai bisogno di parlarne adesso?</h4>
-          <p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
-            Il numero antiviolenza e stalking 1522 è gratuito, attivo 24 ore su 24 e garantisce l'anonimato assoluto.
+      <!-- Articolo 5 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="famiglia">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-cyan">Rete di vicinanza</span>
+              <span class="pill-badge bg-soft-gray">Familiari e Amici</span>
+            </div>
+            <span class="small-copy" style="font-weight: 600;">5 min</span>
+          </div>
+          <h2 class="card-title mb-2">Per familiari, amici e testimoni: come sostenere una persona in difficoltà</h2>
+          <p class="body-copy">
+            Cosa dire e cosa evitare quando temi che una persona cara viva una relazione oppressiva. Offrire ascolto non giudicante senza forzare i tempi.
           </p>
-          <a class="inline-flex items-center gap-1.5 py-2 px-4 rounded-full bg-primary text-on-primary font-label-md text-label-md active:scale-95 transition-transform shadow-sm" href="tel:1522">
-            <span class="material-symbols-outlined text-[18px]">call</span>
-            <span>Chiama il 1522</span>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="5">
+          <span>Leggi l'articolo completo</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
+        </button>
+      </article>
+
+      <!-- Articolo 6 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="parita">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-navy">Educazione &amp; RESPECT</span>
+              <span class="pill-badge bg-soft-gray">Giovani e Uomini</span>
+            </div>
+            <span class="small-copy" style="font-weight: 600;">5 min</span>
+          </div>
+          <h2 class="card-title mb-2">Prevenzione primaria: coltivare le differenze e superare gli stereotipi rigidi</h2>
+          <p class="body-copy">
+            Le differenze individuali sono una ricchezza, mai un alibi per disuguaglianze di potere. Come i modelli rigidi limitano sia le donne sia gli uomini.
+          </p>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="6">
+          <span>Leggi l'articolo completo</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
+        </button>
+      </article>
+
+      <!-- Articolo 7 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="diritti">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-pink">Tutele Legali</span>
+              <span class="pill-badge bg-soft-gray">Diritti</span>
+            </div>
+            <span class="small-copy" style="font-weight: 600;">6 min</span>
+          </div>
+          <h2 class="card-title mb-2">Diritti e tutele: gli strumenti giuridici di protezione e sostegno</h2>
+          <p class="body-copy">
+            Misure di allontanamento, ordini di protezione, patrocinio gratuito a spese dello Stato e tutele sul lavoro per proteggere te e i minori.
+          </p>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="7">
+          <span>Leggi la guida legale</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
+        </button>
+      </article>
+
+      <!-- Articolo 8 -->
+      <article class="article-card editorial-card editorial-card-interactive" data-category="diritti">
+        <div>
+          <div class="row-between mb-2">
+            <div class="row-wrap">
+              <span class="pill-badge bg-soft-cyan">Territorio</span>
+              <span class="pill-badge bg-soft-gray">Rete Locale</span>
+            </div>
+            <span class="small-copy" style="font-weight: 600;">4 min</span>
+          </div>
+          <h2 class="card-title mb-2">La rete del territorio: CAV, consultori, servizi sociali e Vivi Veneto</h2>
+          <p class="body-copy">
+            Come le realtà locali operano in sinergia per offrire sostegno psicologico, legale, abitativo e di reinserimento professionale.
+          </p>
+        </div>
+        <button type="button" class="open-article-btn link-action-btn" data-article-id="8">
+          <span>Esplora la rete locale</span>
+          <span class="material-symbols-outlined icon-md">arrow_forward</span>
+        </button>
+      </article>
+
+    </section>
+
+    <!-- Nessun risultato -->
+    <div id="no-results" class="hidden editorial-card text-center mb-4" style="padding: 2.5rem 1.25rem; align-items: center;">
+      <div class="icon-badge-round bg-soft-navy mb-2">
+        <span class="material-symbols-outlined icon-xl">search_off</span>
+      </div>
+      <h3 class="card-title mb-1">Nessuna guida trovata</h3>
+      <p class="body-copy mb-3" style="max-width: 24rem;">Prova a cercare con altri termini o ripristina i filtri per consultare tutti i contenuti.</p>
+      <button type="button" id="reset-filters" class="btn-navy">Mostra tutti gli articoli</button>
+    </div>
+
+    <!-- Banner 1522 -->
+    <aside class="navy-card">
+      <div class="row-between" style="flex-wrap: wrap;">
+        <div class="row-start" style="align-items: center;">
+          <div class="icon-badge" style="background: rgba(255,255,255,0.14); color: var(--asso-cyan);">
+            <span class="material-symbols-outlined icon-xl">phone_in_talk</span>
+          </div>
+          <div>
+            <span class="kicker kicker-light-cyan">Canale Ufficiale H24</span>
+            <h4 class="font-display" style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Hai bisogno di parlarne adesso?</h4>
+            <p class="small-copy" style="margin-top: 0.25rem;">Il 1522 è gratuito, anonimo e attivo 24 ore su 24 anche via chat.</p>
+          </div>
+        </div>
+        <div class="row-wrap">
+          <a href="tel:1522" class="btn-white">
+            <span class="material-symbols-outlined icon-md">call</span>
+            <span>Chiama 1522</span>
+          </a>
+          <a href="chiedere-aiuto.html" class="btn-soft" style="background: rgba(255,255,255,0.16); color: #ffffff; border-color: transparent;">
+            Altri servizi
           </a>
         </div>
-      </aside>
-
-    </div>
+      </div>
+    </aside>
   </main>
 
-  <!-- Pulsante Flottante Emergenza "Esci Subito" -->
-  <div class="fixed bottom-20 right-4 z-50">
-    <a class="min-h-[44px] h-11 px-4 rounded-full bg-emergency-exit text-on-error font-button-label text-button-label flex items-center gap-1.5 shadow-[0_6px_20px_0_rgba(217,83,79,0.35)] active:scale-95 transition-transform hover:opacity-95" href="https://www.google.com" rel="nofollow noreferrer">
-      <span class="material-symbols-outlined text-[20px]">close</span>
+  <!-- Modale Lettura Articolo -->
+  <div id="article-reader-modal" class="pp-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="reader-title">
+    <div class="pp-modal-sheet">
+      <div class="pp-modal-head">
+        <div>
+          <span id="reader-kicker" class="kicker kicker-pink">Approfondimento</span>
+          <h3 id="reader-title" class="card-title mt-1">Titolo Articolo</h3>
+        </div>
+        <button type="button" id="close-reader-modal" class="pp-modal-close" aria-label="Chiudi lettura">
+          <span class="material-symbols-outlined icon-lg">close</span>
+        </button>
+      </div>
+      <div id="reader-body" class="pp-modal-body body-copy"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span><strong>PariPasso</strong> · Conoscere per capire</span>
+      <span>1522 Antiviolenza h24 · 112 Emergenze</span>
+    </div>
+  </footer>
+
+  <div class="mobile-quick-exit">
+    <a href="https://www.google.com" rel="nofollow noreferrer" class="btn-exit-quick quick-exit-trigger">
+      <span class="material-symbols-outlined icon-md">close</span>
       <span>Esci subito</span>
     </a>
   </div>
 
-<!-- Bottom Navigation Bar (Allineamento orizzontale perfetto su 1 riga) -->
-<nav class="fixed bottom-0 inset-x-0 z-40 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(32,52,136,0.06)]">
-  <div class="flex justify-between items-center h-16 px-1">
-    
-    <!-- 1. Conoscere -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="conoscere" href="conoscere.html">
-      <span class="material-symbols-outlined text-[22px]">menu_book</span>
-      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Conoscere</span>
-    </a>
-
-    <!-- 2. Riconoscersi -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="riconoscersi" href="riconoscersi.html">
-      <span class="material-symbols-outlined text-[22px]">psychology</span>
-      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Riconoscersi</span>
-    </a>
-
-    <!-- 3. Voci -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-text-muted transition-colors min-h-[44px]" data-path="voci" href="voci.html">
-      <span class="material-symbols-outlined text-[22px]">forum</span>
-      <span class="text-[11px] leading-tight mt-1 font-medium whitespace-nowrap">Voci</span>
-    </a>
-
-    <!-- 4. Chiedi aiuto (Evidenziato in rosso, dicitura compatta su 1 riga) -->
-    <a class="flex flex-col items-center justify-center flex-1 h-full py-1 transition-colors min-h-[44px] text-emergency-exit" data-path="chiedere-aiuto" href="chiedere-aiuto.html">
-      <span class="material-symbols-outlined text-[22px]">shield</span>
-      <span class="text-[11px] leading-tight mt-1 font-bold whitespace-nowrap">Chiedi aiuto</span>
-    </a>
-
-  </div>
-</nav>
-
-  <!-- Script Funzionale di Pagina -->
-  <script src="js/conoscere.js"></script>
+  <nav class="bottom-nav pb-safe" aria-label="Menu mobile">
+    <div class="bottom-nav-inner">
+      <a class="bottom-nav-link" data-nav-target="conoscere" href="conoscere.html">
+        <span class="material-symbols-outlined icon-lg">menu_book</span>
+        <span>Conoscere</span>
+      </a>
+      <a class="bottom-nav-link" data-nav-target="riconoscersi" href="riconoscersi.html">
+        <span class="material-symbols-outlined icon-lg">psychology</span>
+        <span>Riconoscersi</span>
+      </a>
+      <a class="bottom-nav-link" data-nav-target="voci" href="voci.html">
+        <span class="material-symbols-outlined icon-lg">forum</span>
+        <span>Voci</span>
+      </a>
+      <a class="bottom-nav-link is-emergency" data-nav-target="chiedere-aiuto" href="chiedere-aiuto.html">
+        <span class="material-symbols-outlined icon-lg">shield</span>
+        <span>Chiedi aiuto</span>
+      </a>
+    </div>
+  </nav>
 </body>
 </html>
